@@ -1,0 +1,140 @@
+   *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial,sans-serif;
+
+        }
+      body{
+            line-height: 1.5;
+        }
+
+.box {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(10, 9, 58, 0.582);
+  padding:auto;
+  padding-top:20px;
+  margin: 100px auto;
+  width: 250px;
+  border-radius:20px;
+}
+p {
+  color: rgb(140, 140, 242);
+}
+
+/* div{
+  background: linear-gradient(to right,#0a70c446);
+  border-radius: 500px;
+  padding: auto;
+  border-bottom: aqua;
+} */
+.div{
+background: linear-gradient(to right,#58a9ec46),#da02da3f; 
+  border-radius: 0;
+ position: relative;
+display: flex;
+gap: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+ 
+}
+
+
+img{
+  width: 70px;
+  height: 60px;
+  
+  border-radius: 50px;
+  
+  background: transparent;
+}
+body{
+   
+
+    background: linear-gradient(to left,rgba(22, 21, 21, 0.45),#1601ff29);
+    /* color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  background:rgba(97, 201, 41, 0.587); */
+}
+footer{
+  text-align: center;
+  background: rgba(22, 21, 21, 0.45);
+  padding: 10%;
+}
+.nav-router{
+  color: white;
+  text-decoration: none;
+  padding-top: 15px;
+}
+.nav-router:hover{
+color: black;
+
+}
+button{
+  width: 90%;
+  border-radius: 15px;
+  height: auto;
+} 
+h2{
+  color: rgb(231, 77, 77);
+}
+
+
+/* Welcome message styling */
+.hi {
+  position: relative;
+  top: 30px;
+  text-align: center;
+  background: #42b983;
+  color: white;
+  padding: 15px ;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.nav-route{
+  color: rgb(244, 5, 5);
+  text-decoration: none;
+  padding-top: 15px;
+}
+.nav-route:hover{
+color: black;
+
+}
+.container{
+  text-align: center;
+  margin-top: 50%;
+}
+.table{
+  text-align: auto;
+  padding-left: 220px;
+}
+
+.none{
+  text-align: center;
+  margin-top: 100px;
+}
+p{
+  color: rgb(245, 234, 234);
+}
+.d{
+color: white;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(10, 9, 58, 0.582);
+  padding:auto;
+  padding-top:20px;
+  margin: 100px auto;
+  width: 250px;
+  border-radius:20px;
+}
