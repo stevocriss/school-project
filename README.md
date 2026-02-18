@@ -1,2 +1,2 @@
-# school-project
-making practice
+<<<<<<< 
+>>>>>>> 28fec9b (feature-login)
