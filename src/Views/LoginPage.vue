@@ -1,28 +1,33 @@
-
-
 <template>
   
-<header>
-  
 
-  <nav ><div class="div">
-    <img src="./assets/logo.png" alt="not found">
-    <router-link to="/" class="nav-router">Home</router-link> 
-    <router-link to="/about" class="nav-router">About</router-link>
-     <router-link to="/ServicePage" class="nav-router">Services</router-link> 
-    <router-link to="/ContactPage" class="nav-router">Contact Us</router-link>
+  <div class="table">
+    <div class="color">
+      <form @submit.prevent="make">
+        <h1>LOGIN</h1><br>
+        <label>ID:</label><br>
+        <input type="text" v-model="go.id" @blur="validid"><br>
+        <p style="color:red">{{ my.pr }}</p>
+
+        <label>NAME:</label><br>
+        <input type="text" v-model="go.name" @blur="validname"><br>
+        <p style="color:red">{{ hi.nam }}</p>
+
+        <label>EMAIL:</label><br>
+        <input type="text" v-model="go.email" @blur="validemail"><br><br>
+        <p style="color:red">{{ no.emai }}</p>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p>{{ go.id }} {{ go.name }} {{ go.email }}</p>
+
     </div>
-  </nav>
-</header>
-  <footer>
- 
-   ©2026 MyWebsite. All Rights Reserved .
-</footer>
-    <router-view />
+  </div>
 </template>
 <script>
 export default {
-  
+  name: "AboutView",
 
   data() {
     return {
@@ -82,9 +87,4 @@ export default {
   }
 }
 </script>
-
-
-
-
-
 

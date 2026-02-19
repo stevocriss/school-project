@@ -68,7 +68,8 @@ body{
 footer{
   text-align: center;
   background: rgba(22, 21, 21, 0.45);
-  padding: 10%;
+  padding: 15%;
+  margin-top: 20%;
 }
 .nav-router{
   color: white;
@@ -80,12 +81,12 @@ color: black;
 
 }
 button{
-  width: 90%;
+  width: 30%;
   border-radius: 15px;
   height: auto;
 } 
 h2{
-  color: rgb(231, 77, 77);
+  color: rgb(217, 119, 119);
 }
 
 
@@ -113,7 +114,7 @@ color: black;
 }
 .container{
   text-align: center;
-  margin-top: 50%;
+  margin-top: 6%;
 }
 .table{
   text-align: auto;
@@ -122,7 +123,7 @@ color: black;
 
 .none{
   text-align: center;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 p{
   color: rgb(245, 234, 234);
@@ -137,4 +138,15 @@ color: white;
   margin: 100px auto;
   width: 250px;
   border-radius:20px;
+}
+.color{
+  background-color: black;
+  width: 250px;
+  color: white;
+  text-align: center;
+padding: auto;
+padding-top: 20px;
+border-radius: 20px;
+margin-top: 150px;
+margin-left: 25%;
 }

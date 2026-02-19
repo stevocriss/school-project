@@ -1,30 +1,47 @@
 <template>
-  <div class="box">
-    <h1>Simple<br> Clicking<br>Game</h1>
-    <p>score : {{ score }}</p>
-    <button v-if="!test" @click="tree">Click</button>
-    <h2 v-else>Game is over</h2>
+  <div class="table">
+    <div class="color">
+      <form @submit.prevent="make">
+        <h1>LOGIN</h1><br>
+        <label>ID:</label><br>
+        <input type="text" v-model="go.id" @blur="validid"><br>
+        <p style="color:red">{{ my.pr }}</p>
 
+        <label>NAME:</label><br>
+        <input type="text" v-model="go.name" @blur="validname"><br>
+        <p style="color:red">{{ hi.nam }}</p>
+
+        <label>EMAIL:</label><br>
+        <input type="text" v-model="go.email" @blur="validemail"><br><br>
+        <p style="color:red">{{ no.emai }}</p>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p>{{ go.id }} {{ go.name }} {{ go.email }}</p>
+
+    </div>
   </div>
-
-  <div v-if="welcome" class="hi">Cool😅😅</div>
-<footer>
- 
-   ©2026 MyWebsite. All Rights Reserved .
-</footer>
-
+    <router-view />
 </template>
 <script>
 export default {
-  name: "HomeView",
+  
+ name: "HomeView",
   data() {
     return {
-      score: 0,
-      test: false,
-      welcome: false
+      go: {
+        id: "",
+        name: "",
+        email: "",
+        welcome: false
+      },
+      my: { pr: "" },
+      hi: { nam: "" },
+      no: { emai: "" }
     }
   },
-  mounted() {
+mounted() {
     // Appear after 5 seconds
     setTimeout(() => {
       this.welcome = true
@@ -37,10 +54,45 @@ export default {
     }, )
   },
   methods: {
-    tree() {
-      this.score++
-      if (this.score >= 20) {
-        this.test = true
+
+    validId() {
+      if (!this.go.id) {
+        this.my.pr = "ID is required"
+      } else {
+        this.my.pr = ""
+      }
+    },
+
+    validName() {
+      if (!this.go.name) {
+        this.hi.nam = "Name is required"
+      } else {
+        this.hi.nam = ""
+      }
+    },
+
+    validEmail() {
+      if (!this.go.email) {
+        this.no.emai = "Email is required"
+      } else if (!this.go.email.includes("@")) {
+        this.no.emai = "Email must contain @"
+      } else {
+        this.no.emai = ""
+      }
+    },
+
+    make() {
+
+      this.validId()
+      this.validName()
+      this.validEmail()
+
+      if (!this.my.pr && !this.hi.nam && !this.no.emai) {
+        alert("done👌👌👌👌")
+
+        // this.go.id = ""
+        // this.go.name = ""
+        // this.go.email = ""
       }
     }
   }
