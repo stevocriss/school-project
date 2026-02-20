@@ -1,90 +1,24 @@
-
-
 <template>
-  
-<header>
-  
+  <header>
+    <nav>
+      <div class="div">
+        <img src="./assets/logo.png" alt="not found">
+        <router-link to="/" class="nav-router">Home</router-link>
+        <router-link to="/about" class="nav-router">About</router-link>
+        <router-link to="/ServicePage" class="nav-router">Services</router-link>
+        <router-link to="/ContactPage" class="nav-router">Contact Us</router-link>
+      </div>
+    </nav>
+  </header>
 
-  <nav ><div class="div">
-    <img src="./assets/logo.png" alt="not found">
-    <router-link to="/" class="nav-router">Home</router-link> 
-    <router-link to="/about" class="nav-router">About</router-link>
-     <router-link to="/ServicePage" class="nav-router">Services</router-link> 
-    <router-link to="/ContactPage" class="nav-router">Contact Us</router-link>
-    </div>
-  </nav>
-</header>
+  <router-view />
+
   <footer>
- 
-   ©2026 MyWebsite. All Rights Reserved .
-</footer>
-    <router-view />
+    <router-link to="/" class="nav-router">Home</router-link>
+    <router-link to="/about" class="nav-router">About</router-link>
+    <router-link to="/ServicePage" class="nav-router">Services</router-link>
+    <router-link to="/ContactPage" class="nav-router">Contact Us</router-link>
+    <router-link to="/PlayGame" class="nav-router">Play a game</router-link>
+    ©2026 MyWebsite. All Rights Reserved.
+  </footer>
 </template>
-<script>
-export default {
-  
-
-  data() {
-    return {
-      go: {
-        id: "",
-        name: "",
-        email: ""
-      },
-      my: { pr: "" },
-      hi: { nam: "" },
-      no: { emai: "" }
-    }
-  },
-
-  methods: {
-
-    validId() {
-      if (!this.go.id) {
-        this.my.pr = "ID is required"
-      } else {
-        this.my.pr = ""
-      }
-    },
-
-    validName() {
-      if (!this.go.name) {
-        this.hi.nam = "Name is required"
-      } else {
-        this.hi.nam = ""
-      }
-    },
-
-    validEmail() {
-      if (!this.go.email) {
-        this.no.emai = "Email is required"
-      } else if (!this.go.email.includes("@")) {
-        this.no.emai = "Email must contain @"
-      } else {
-        this.no.emai = ""
-      }
-    },
-
-    make() {
-
-      this.validId()
-      this.validName()
-      this.validEmail()
-
-      if (!this.my.pr && !this.hi.nam && !this.no.emai) {
-        alert("done👌👌👌👌")
-
-        // this.go.id = ""
-        // this.go.name = ""
-        // this.go.email = ""
-      }
-    }
-  }
-}
-</script>
-
-
-
-
-
-

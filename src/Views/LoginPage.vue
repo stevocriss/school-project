@@ -1,7 +1,7 @@
 <template>
   
 
-  <div class="table">
+  
     <div class="color">
       <form @submit.prevent="make">
         <h1>LOGIN</h1><br>
@@ -23,7 +23,7 @@
       <p>{{ go.id }} {{ go.name }} {{ go.email }}</p>
 
     </div>
-  </div>
+  
 </template>
 <script>
 export default {
