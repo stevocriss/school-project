@@ -43,7 +43,6 @@ export default {
   },
 
   methods: {
-
     validId() {
       if (!this.go.id) {
         this.my.pr = "ID is required"
@@ -70,18 +69,29 @@ export default {
       }
     },
 
-    make() {
+   async make() {
 
-      this.validId()
-      this.validName()
-      this.validEmail()
-
+      this.validId();
+      this.validName();
+      this.validEmail();
       if (!this.my.pr && !this.hi.nam && !this.no.emai) {
-        alert("done👌👌👌👌")
+       try{
+        const criss= await fetch("https://jsonplaceholder.typicode.com/users/",{
+          method:"POST",
+          headers:{"Content-Type":"application/json"},
+          body:JSON.stringify(this.make)
+        });
+        if(!criss.ok) throw new Error("Sub fail");
+         alert("done👌👌👌👌");
+  
+        this.go.id = ""
+        this.go.name = ""
+        this.go.email = ""
+       }
+       catch(error){
+        alert(f.message);
+       }
 
-        // this.go.id = ""
-        // this.go.name = ""
-        // this.go.email = ""
       }
     }
   }

@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-  name: "Play",
+  name: "PlayGame",
   data() {
     return {
       score: 0,
