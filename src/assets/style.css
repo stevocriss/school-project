@@ -65,6 +65,7 @@ body{
     flex-direction: column;
   background:rgba(97, 201, 41, 0.587); */
 }
+
 footer{
   text-align: center;
   background: rgba(22, 21, 21, 0.45);
@@ -142,13 +143,19 @@ color: white;
 }
 .color{
   background-color: black;
-  width: 250px;
+  width: 280px;
+  height: 400px;
   color: white;
   text-align: center;
 padding: auto;
 padding-top: 40px;
 border-radius: 20px;
 /* margin-top: 150px; */
-margin-left: 32px;
+margin-left: 25%;
 margin-top: 70px;
+}
+.contact{
+  padding: 2px;
+  margin: 20%;
+  text-align: center;
 }

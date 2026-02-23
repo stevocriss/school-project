@@ -14,6 +14,7 @@
   <router-view />
 
   <footer>
+    
     <router-link to="/" class="nav-router">Home</router-link>
     <router-link to="/about" class="nav-router">About</router-link>
     <router-link to="/ServicePage" class="nav-router">Services</router-link>
