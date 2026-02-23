@@ -76,7 +76,7 @@ export default {
       this.validEmail();
       if (!this.my.pr && !this.hi.nam && !this.no.emai) {
        try{
-        const criss= await fetch("https://jsonplaceholder.typicode.com/users/",{
+        const criss= await fetch("https://jsonplaceholder.typicode.com/users/yyt",{
           method:"POST",
           headers:{"Content-Type":"application/json"},
           body:JSON.stringify(this.make)
@@ -89,7 +89,7 @@ export default {
         this.go.email = ""
        }
        catch(error){
-        alert(f.message);
+        alert(error.message);
        }
 
       }
