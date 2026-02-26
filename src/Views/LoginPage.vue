@@ -11,16 +11,16 @@
 
         <label>NAME:</label><br>
         <input type="text" v-model="go.name" @blur="validname"><br>
-        <p style="color:red">{{ hi.nam }}</p>
+        <!-- <p style="color:red">{{ hi.nam }}</p> -->
 
         <label>EMAIL:</label><br>
         <input type="text" v-model="go.email" @blur="validemail"><br><br>
-        <p style="color:red">{{ no.emai }}</p>
+        <!-- <p style="color:red">{{ no.emai }}</p> -->
 
         <button type="submit">Submit</button>
       </form>
 
-      <p>{{ go.id }} {{ go.name }} {{ go.email }}</p>
+      <!-- <p>{{ go.id }} {{ go.name }} {{ go.email }}</p> -->
 
     </div>
   
@@ -76,13 +76,13 @@ export default {
       this.validEmail();
       if (!this.my.pr && !this.hi.nam && !this.no.emai) {
        try{
-        const criss= await fetch("https://jsonplaceholder.typicode.",{
+        const criss= await fetch("https://jsonplaceholder.typicode.com/users",{
           method:"POST",
           headers:{"Content-Type":"application/json"},
           body:JSON.stringify(this.make)
         });
         if(!criss.ok) throw new Error("Sub fail");
-         alert("done👌👌");
+         alert("done");
   
         this.go.id = ""
         this.go.name = ""
