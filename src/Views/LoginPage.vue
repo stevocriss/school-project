@@ -1,30 +1,34 @@
 <template>
-  
+  <div class="color">
+    <form @submit.prevent="make">
+      <h1>LOGIN</h1><br>
 
-  
-    <div class="color">
-      <form @submit.prevent="make">
-        <h1>LOGIN</h1><br>
-        <label>ID:</label><br>
-        <input type="text" v-model="go.id" @blur="validid"><br>
-        <p style="color:red">{{ my.pr }}</p>
+      <label>ID:</label><br>
+      <input type="text" v-model="go.id" @blur="validId"><br>
+      <p style="color:red">{{ my.pr }}</p>
 
-        <label>NAME:</label><br>
-        <input type="text" v-model="go.name" @blur="validname"><br>
-        <p style="color:red">{{ hi.nam }}</p>
+      <label>NAME:</label><br>
+      <input type="text" v-model="go.name" @blur="validName"><br>
+      <p style="color:red">{{ hi.nam }}</p>
 
-        <label>EMAIL:</label><br>
-        <input type="text" v-model="go.email" @blur="validemail"><br><br>
-        <p style="color:red">{{ no.emai }}</p>
+      <label>EMAIL:</label><br>
+      <input type="text" v-model="go.email" @blur="validEmail"><br>
+      <p style="color:red">{{ no.emai }}</p><br>
 
-        <button type="submit">Submit</button>
-      </form>
+      <button type="submit">Submit</button>
+    </form>
 
-      <p>{{ go.id }} {{ go.name }} {{ go.email }}</p>
-
+    <!-- Display submitted data -->
+    <div v-if="submitted">
+      <h3>Submitted Data:</h3>
+      <p>{{ submittedData.id }}</p>
+      <p>{{ submittedData.name }}</p>
+      <p>{{ submittedData.email }}</p>
     </div>
-  
+
+  </div>
 </template>
+
 <script>
 export default {
   name: "AboutView",
@@ -38,63 +42,64 @@ export default {
       },
       my: { pr: "" },
       hi: { nam: "" },
-      no: { emai: "" }
+      no: { emai: "" },
+      submitted: false,
+      submittedData: {}
     }
   },
 
   methods: {
     validId() {
-      if (!this.go.id) {
-        this.my.pr = "ID is required"
-      } else {
-        this.my.pr = ""
-      }
+      this.my.pr = !this.go.id ? "ID is required" : "";
     },
 
     validName() {
-      if (!this.go.name) {
-        this.hi.nam = "Name is required"
-      } else {
-        this.hi.nam = ""
-      }
+      this.hi.nam = !this.go.name ? "Name is required" : "";
     },
 
     validEmail() {
       if (!this.go.email) {
-        this.no.emai = "Email is required"
+        this.no.emai = "Email is required";
       } else if (!this.go.email.includes("@")) {
-        this.no.emai = "Email must contain @"
+        this.no.emai = "Email must contain @";
       } else {
-        this.no.emai = ""
+        this.no.emai = "";
       }
     },
 
-   async make() {
-
+    async make() {
       this.validId();
       this.validName();
       this.validEmail();
-      if (!this.my.pr && !this.hi.nam && !this.no.emai) {
-       try{
-        const criss= await fetch("https://jsonplaceholder.typicode.com/users/yyt",{
-          method:"POST",
-          headers:{"Content-Type":"application/json"},
-          body:JSON.stringify(this.make)
-        });
-        if(!criss.ok) throw new Error("Sub fail");
-         alert("done👌👌👌👌");
-  
-        this.go.id = ""
-        this.go.name = ""
-        this.go.email = ""
-       }
-       catch(error){
-        alert(error.message);
-       }
 
+      if (!this.my.pr && !this.hi.nam && !this.no.emai) {
+        try {
+          const response = await fetch(
+            "https://jsonplaceholder.typicode.com/posts",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(this.go)
+            }
+          );
+
+          if (!response.ok) throw new Error("Submit failed");
+
+          // Show data on screen
+          this.submittedData = { ...this.go };
+          this.submitted = true;
+
+          // Clear form
+          this.go.id = "";
+          this.go.name = "";
+          this.go.email = "";
+
+          alert("Done 👌");
+        } catch (error) {
+          alert(error.message);
+        }
       }
     }
   }
 }
 </script>
-
