@@ -11,15 +11,19 @@
 
         <label>NAME:</label><br>
         <input type="text" v-model="go.name" @blur="validname"><br>
-        <!-- <p style="color:red">{{ hi.nam }}</p> -->
+        <p style="color:red">{{ hi.nam }}</p>
 
         <label>EMAIL:</label><br>
         <input type="text" v-model="go.email" @blur="validemail"><br><br>
-        <!-- <p style="color:red">{{ no.emai }}</p> -->
+        <p style="color:red">{{ no.emai }}</p>
 
         <button type="submit">Submit</button>
       </form>
-
+           <div id="fin" v-if="scse">
+            <p>{{ go.id }}</p>
+            <p>{{ go.name }}</p>
+            <p>{{ go.email }}</p>
+           </div>
       <!-- <p>{{ go.id }} {{ go.name }} {{ go.email }}</p> -->
 
     </div>
