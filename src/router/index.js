@@ -5,6 +5,7 @@ import NotFound from '../Views/NotFound.vue'
 import ServicePage from '@/Views/ServicePage.vue'
 import PlayGame from '../Views/PlayGame.vue'
 import ContactPage from '../Views/ContactPage.vue'
+import LoginPage from '../Views/LoginPage.vue'
 
 
 
@@ -38,7 +39,13 @@ const routes = [
     path:'/ContactPage',
     name:'ContactPage',
     component:ContactPage
+  },
+  {
+    path:'/LoginPage',
+    name:'LoginPage',
+    component:LoginPage
   }
+  
   
 ]
 

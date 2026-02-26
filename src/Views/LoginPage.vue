@@ -19,19 +19,15 @@
 
         <button type="submit">Submit</button>
       </form>
-           <div id="fin" v-if="scse">
-            <p>{{ go.id }}</p>
-            <p>{{ go.name }}</p>
-            <p>{{ go.email }}</p>
-           </div>
-      <!-- <p>{{ go.id }} {{ go.name }} {{ go.email }}</p> -->
+
+      <p>{{ go.id }} {{ go.name }} {{ go.email }}</p>
 
     </div>
-  
+  <h5>gjadvfhbekad</h5>
 </template>
 <script>
 export default {
-  name: "AboutView",
+  name: "LoginPage",
 
   data() {
     return {
