@@ -1,5 +1,8 @@
 <template>
-    <h1>hi</h1>
+    <div class="contact">
+    <h1>there is nothing is here</h1>
+    </div>
+
 </template>
 <script>
 export default{
