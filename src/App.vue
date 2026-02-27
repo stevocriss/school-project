@@ -2,6 +2,7 @@
   <header>
     <nav>
       <div class="div">
+        
         <img src="./assets/logo.png" alt="not found">
         <router-link to="/" class="nav-router">Home</router-link>
         <router-link to="/about" class="nav-router">About</router-link>

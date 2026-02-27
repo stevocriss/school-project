@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   
 
   
@@ -7,15 +7,15 @@
         <h1>LOGIN</h1><br>
         <label>ID:</label><br>
         <input type="text" v-model="go.id" @blur="validid"><br>
-        <p style="color:red">{{ my.pr }}</p>
+        <p style="color:red">{{ ben.pr }}</p>
 
         <label>NAME:</label><br>
         <input type="text" v-model="go.name" @blur="validname"><br>
-        <p style="color:red">{{ hi.nam }}</p>
+        <p style="color:red">{{ ben.nam }}</p>
 
         <label>EMAIL:</label><br>
         <input type="text" v-model="go.email" @blur="validemail"><br><br>
-        <p style="color:red">{{ no.emai }}</p>
+        <p style="color:red">{{ ben.emai }}</p>
 
         <button type="submit">Submit</button>
       </form>
@@ -36,36 +36,36 @@ export default {
         name: "",
         email: ""
       },
-      my: { pr: "" },
-      hi: { nam: "" },
-      no: { emai: "" }
+      ben: { pr: "" ,
+       nam: "" ,
+       emai: "" }
     }
   },
 
   methods: {
-    validId() {
+    validid() {
       if (!this.go.id) {
-        this.my.pr = "ID is required"
+        this.ben.pr = "ID is required"
       } else {
-        this.my.pr = ""
+        this.ben.pr = ""
       }
     },
 
-    validName() {
+    validname() {
       if (!this.go.name) {
-        this.hi.nam = "Name is required"
+        this.ben.nam = "Name is required"
       } else {
-        this.hi.nam = ""
+        this.ben.nam = ""
       }
     },
 
-    validEmail() {
+    validemail() {
       if (!this.go.email) {
-        this.no.emai = "Email is required"
+        this.ben.emai = "Email is required"
       } else if (!this.go.email.includes("@")) {
-        this.no.emai = "Email must contain @"
+        this.ben.emai = "Email must contain @"
       } else {
-        this.no.emai = ""
+        this.ben.emai = ""
       }
     },
 
@@ -74,12 +74,12 @@ export default {
       this.validId();
       this.validName();
       this.validEmail();
-      if (!this.my.pr && !this.hi.nam && !this.no.emai) {
+      if (!this.ben.pr && !this.ben.nam && !this.ben.emai) {
        try{
         const criss= await fetch("https://jsonplaceholder.typicode.com/users",{
           method:"POST",
           headers:{"Content-Type":"application/json"},
-          body:JSON.stringify(this.make)
+          body:JSON.stringify(this.go)
         });
         if(!criss.ok) throw new Error("Sub fail");
          alert("done");
@@ -97,4 +97,8 @@ export default {
   }
 }
 </script>
+ -->
 
+ <template>
+  <h1></h1>
+ </template>
