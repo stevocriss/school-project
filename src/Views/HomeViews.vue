@@ -19,10 +19,11 @@
 
         <button type="submit">Submit</button>
       </form>
-
+li
       <p>{{ go.id }} {{ go.name }} {{ go.email }}</p>
-
+<router-link>or sign up</router-link>
     </div>
+  
   
 </template><script>
 export default {
