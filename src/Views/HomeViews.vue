@@ -6,15 +6,15 @@
       <form @submit.prevent="make">
         <h1>LOGIN</h1><br>
         <label>ID:</label><br>
-        <input type="text" v-model="go.id" @blur="validid"><br>
+        <input type="text" v-model="go.id" @blur="validId"><br>
         <p style="color:red">{{ ben.pr }}</p>
 
         <label>NAME:</label><br>
-        <input type="text" v-model="go.name" @blur="validname"><br>
+        <input type="text" v-model="go.name" @blur="validName"><br>
         <p style="color:red">{{ ben.nam }}</p>
 
         <label>EMAIL:</label><br>
-        <input type="text" v-model="go.email" @blur="validemail"><br><br>
+        <input type="text" v-model="go.email" @blur="validEmail"><br><br>
         <p style="color:red">{{ ben.emai }}</p>
 
         <button type="submit">Submit</button>
@@ -24,8 +24,7 @@
 
     </div>
   
-</template>
-<script>
+</template><script>
 export default {
   name: "LoginPage",
 
@@ -36,62 +35,65 @@ export default {
         name: "",
         email: ""
       },
-      ben: { pr: "" ,
-       nam: "" ,
-       emai: "" }
+      ben: { 
+        pr: "",
+        nam: "",
+        emai: "" 
+      }
     }
   },
 
   methods: {
-    validid() {
+    validId() {
       if (!this.go.id) {
-        this.ben.pr = "ID is required"
+        this.ben.pr = "ID is required";
       } else {
-        this.ben.pr = ""
+        this.ben.pr = "";
       }
     },
 
-    validname() {
+    validName() {
       if (!this.go.name) {
-        this.ben.nam = "Name is required"
+        this.ben.nam = "Name is required";
       } else {
-        this.ben.nam = ""
+        this.ben.nam = "";
       }
     },
 
-    validemail() {
+    validEmail() {
       if (!this.go.email) {
-        this.ben.emai = "Email is required"
+        this.ben.emai = "Email is required";
       } else if (!this.go.email.includes("@")) {
-        this.ben.emai = "Email must contain @"
+        this.ben.emai = "Email must contain @";
       } else {
-        this.ben.emai = ""
+        this.ben.emai = "";
       }
     },
 
-   async make() {
+    async make() {
 
       this.validId();
       this.validName();
       this.validEmail();
-      if (!this.ben.pr && !this.ben.nam && !this.ben.emai) {
-       try{
-        const criss= await fetch("https://jsonplaceholder.typicode.com/users",{
-          method:"POST",
-          headers:{"Content-Type":"application/json"},
-          body:JSON.stringify(this.go)
-        });
-        if(!criss.ok) throw new Error("Sub fail");
-         alert("done");
-  
-        this.go.id = ""
-        this.go.name = ""
-        this.go.email = ""
-       }
-       catch(error){
-        alert(error.message);
-       }
 
+      if (!this.ben.pr && !this.ben.nam && !this.ben.emai) {
+        try {
+          const criss = await fetch("https://jsonplaceholder.typicode.com/users", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(this.go)
+          });
+
+          if (!criss.ok) throw new Error("Submit failed");
+
+          // alert("Done");
+
+          // ✅ Redirect to Mom page
+          this.$router.push('/DashBoard');
+
+        } catch (error) {
+          alert(error.message);
+        }
       }
     }
   }

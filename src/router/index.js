@@ -6,6 +6,7 @@ import ServicePage from '@/Views/ServicePage.vue'
 import PlayGame from '../Views/PlayGame.vue'
 import ContactPage from '../Views/ContactPage.vue'
 import LoginPage from '../Views/LoginPage.vue'
+import DashBoard from '../Views/DashBoard.vue'
 
 
 
@@ -44,6 +45,11 @@ const routes = [
     path:'/LoginPage',
     name:'LoginPage',
     component:LoginPage
+  },
+  {
+    path:'/DashBoard',
+    name:'DashBoard',
+    component:DashBoard
   }
   
   
