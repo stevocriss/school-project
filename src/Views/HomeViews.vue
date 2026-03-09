@@ -19,9 +19,9 @@
 
         <button type="submit">Submit</button>
       </form>
-li
+
       <p>{{ go.id }} {{ go.name }} {{ go.email }}</p>
-<router-link>or sign up</router-link>
+<router-link style="color: white;">or sign up</router-link>
     </div>
   
   

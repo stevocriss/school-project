@@ -133,17 +133,47 @@ footer{
   margin-top: 15%;
 }
 
+/* //dash board */
+
+.dash{
+  text-align: center;
+  margin: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* responsive */
 
 @media (max-width:600px){
 
   .div{
-    flex-direction:column;
+    /* flex-direction:column; */
     align-items:center;
+    height: 100px;
   }
 
   .box, .d, .color{
-    margin-top:140px;
+    margin-top:40%;
   }
 
   h2{
@@ -154,6 +184,7 @@ footer{
     width:100%;
   }
 }
+
 
 @media (min-width:601px) and (max-width:1024px){
   
