@@ -87,10 +87,11 @@ export default {
 
           if (!criss.ok) throw new Error("Submit failed");
 
-          // alert("Done");
+          
 
-          // ✅ Redirect to Mom page
-          this.$router.push('/DashBoard');
+            this.$router.push({name:'Dashboard'}); 
+          
+          
 
         } catch (error) {
           alert(error.message);
