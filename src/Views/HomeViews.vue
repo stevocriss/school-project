@@ -21,7 +21,7 @@
       </form>
 
       <p>{{ go.id }} {{ go.name }} {{ go.email }}</p>
-<router-link style="color: white;">or sign up</router-link>
+<router-link style="color: violet;" to="/SignupPage">or sign up</router-link>
     </div>
   
   
@@ -87,11 +87,10 @@ export default {
 
           if (!criss.ok) throw new Error("Submit failed");
 
-          
+          // alert("Done");
 
-            this.$router.push({name:'Dashboard'}); 
           
-          
+          this.$router.push('/DashBoard');
 
         } catch (error) {
           alert(error.message);
