@@ -15,6 +15,7 @@ const routes = [
     name: 'Home',
     component: HomeViews
   },
+ 
   {
     path:'/SignupPage',
     name:'SignupPage',

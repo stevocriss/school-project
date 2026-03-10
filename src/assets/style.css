@@ -10,7 +10,7 @@ body{
   background: linear-gradient(to left,rgba(22, 21, 21, 0.45),#1601ff29);
 }
 
-/* NAVBAR */
+
 .div{
   background: linear-gradient(to right,#58a9ec46,#da02da3f);
   display:flex;
@@ -31,7 +31,7 @@ img{
   border-radius:50%;
 }
 
-/* BOX */
+
 .box, .d{
   color:white;
   font-size:20px;
@@ -44,7 +44,7 @@ img{
   border-radius:20px;
 }
 
-/* COLOR CARD */
+
 .color{
   background-color:rgb(0, 0, 0);
   width:90%;
@@ -57,7 +57,7 @@ img{
   margin:150px auto 0 auto;
 }
 
-/* TEXT */
+
 p{
   color:rgb(245, 234, 234);
 }
@@ -66,7 +66,7 @@ h2{
   color:rgb(217, 119, 119);
 }
 
-/* BUTTON */
+
 button{
   width:100%;
   max-width:200px;
@@ -74,22 +74,22 @@ button{
   padding:10px;
 }
 
-/* FOOTER */
 footer{
   text-align:center;
   background:rgba(22, 21, 21, 0.45);
   padding:40px 10px;
   margin-top:40px;
+  display:grid;
 }
 
-/* CONTAINER */
+
 .container{
   text-align:center;
   margin-top:100px;
   padding:0 15px;
 }
 
-/* CONTACT */
+
 .contact{
   padding:10px;
   margin:110px auto;
@@ -98,13 +98,13 @@ footer{
   max-width:400px;
 }
 
-/* TABLE FIX */
-.table{
+
+/* .table{
   overflow-x:auto;
   padding:0 15px;
-}
+} */
 
-/* WELCOME MESSAGE */
+
 .hi{
   margin-top:100px;
   text-align:center;
@@ -117,7 +117,7 @@ footer{
   box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* NAV LINKS */
+
 .nav-router,
 .nav-route{
   color:white;
@@ -133,16 +133,30 @@ footer{
   margin-top: 15%;
 }
 
-/* //dash board */
+
 
 .dash{
   text-align: center;
   margin: 50px;
 }
+.header{
+  text-align: center;
+  margin-top: 110px;
+}
 
-
-
-
+.input-form{
+  text-align: right;
+   background: linear-gradient(to right,#58a9ec46,#da02da3f);
+   
+   height: auto;
+}
+.input-form button{
+width:110px;
+}
+.student-table{
+  font-weight: bold;
+  text-align: center;
+}
 
 
 

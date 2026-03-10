@@ -26,7 +26,7 @@
       </form>
 
       <p>{{ inputs.id }} {{ inputs.name }} {{ inputs.email }} {{ inputs.passw }}</p>
-
+<router-link style="color: violet;" to="/HomeViews">or Login</router-link>
     </div>
   
   
