@@ -19,9 +19,9 @@
 
         <button type="submit">Submit</button>
       </form>
-li
+
       <p>{{ go.id }} {{ go.name }} {{ go.email }}</p>
-<router-link>or sign up</router-link>
+<router-link style="color: violet;" to="/SignupPage">or sign up</router-link>
     </div>
   
   
@@ -89,7 +89,7 @@ export default {
 
           // alert("Done");
 
-          // ✅ Redirect to Mom page
+          
           this.$router.push('/DashBoard');
 
         } catch (error) {

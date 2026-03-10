@@ -5,9 +5,8 @@ import NotFound from '../Views/NotFound.vue'
 import ServicePage from '@/Views/ServicePage.vue'
 import PlayGame from '../Views/PlayGame.vue'
 import ContactPage from '../Views/ContactPage.vue'
-import LoginPage from '../Views/LoginPage.vue'
 import DashBoard from '../Views/DashBoard.vue'
-
+import SignupPage from '../Views/SignupPage.vue'
 
 
 const routes = [
@@ -17,15 +16,21 @@ const routes = [
     component: HomeViews
   },
   {
+    path:'/SignupPage',
+    name:'SignupPage',
+    component:SignupPage
+  },
+  {
+    path:'/dashboard',
+    name:'dashboard',
+    component:DashBoard
+  },
+  {
     path: '/about',
     name: 'About',
     component: AboutViews
   },
-  {
-    path:'/:pathMatch(.*)*',
-    name:'NotFound',
-    component:NotFound
-  },
+  
   {
     path:'/ServicePage',
     name:'ServisePage',
@@ -41,17 +46,13 @@ const routes = [
     name:'ContactPage',
     component:ContactPage
   },
-  {
-    path:'/LoginPage',
-    name:'LoginPage',
-    component:LoginPage
-  },
-  {
-    path:'/DashBoard',
-    name:'DashBoard',
-    component:DashBoard
-  }
+ 
   
+  {
+    path:'/:pathMatch(.*)*',
+    name:'NotFound',
+    component:NotFound
+  }
   
 ]
 
