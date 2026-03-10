@@ -6,7 +6,7 @@
   
     <div class="color">
       <form @submit.prevent="signin">
-        <h1>LOGIN</h1><br>
+        <h1>SIGN UP</h1><br>
         <label for="name">FRIST NAME:</label><br>
         <input type="text" v-model="inputs.id" @blur="validfname"><br>
         <p style="color:red">{{ par.pr }}</p>
