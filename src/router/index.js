@@ -47,8 +47,8 @@ const routes = [
     component:LoginPage
   },
   {
-    path:'/DashBoard',
-    name:'DashBoard',
+    path:'/dashboard',
+    name:'dashboard',
     component:DashBoard
   }
   
